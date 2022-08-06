@@ -1,5 +1,5 @@
 ..
-    Make sure to apply any changes to this file to README_RAW.rst as well!
+    Hello! Make sure to apply any changes to this file to README_RAW.rst as well!
 
 .. image:: https://raw.githubusercontent.com/python-telegram-bot/logos/master/logo-text/png/ptb-logo-text_768.png
    :align: center
@@ -22,7 +22,7 @@
    :target: https://pypistats.org/packages/python-telegram-bot
    :alt: PyPi Package Monthly Download
 
-.. image:: https://readthedocs.org/projects/python-telegram-bot/badge/?version=stable
+.. image:: https://readthedocs.org/projects/python-telegram-ot/badge/?version=stable
    :target: https://docs.python-telegram-bot.org/en/stable/
    :alt: Documentation Status
 
