@@ -1,11 +1,13 @@
 name: "LinkCheck - Changed files"
-"on":
+on:
+  pull_request:
+    branches:
+      - master
+      - doc-fixes
   push:
     branches:
       - master
-    tags:
-      - "**"
-  pull_request: null
+      - doc-fixes
 
 jobs:
   test-sphinx-build:
