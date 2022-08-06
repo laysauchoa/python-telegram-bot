@@ -1,8 +1,13 @@
-name: Check Links in Documentation
+name: "LinkCheck - Changed files"
 on:
-  schedule:
-    # First day of month at 05:46 in every 2nd month
-    - cron: '46 5 1 */2 *'
+  pull_request:
+    branches:
+      - master
+      - doc-fixes
+  push:
+    branches:
+      - master
+      - doc-fixes
 
 jobs:
   test-sphinx-build:
@@ -26,4 +31,16 @@ jobs:
           python -W ignore -m pip install -r requirements-dev.txt
           python -W ignore -m pip install -r docs/requirements-docs.txt
       - name: Check Links
-        run: sphinx-build docs/source docs/build/html -W --keep-going -j auto -b linkcheck
+        run: |
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            if [ "${file: -4}" == ".rst" ]
+              then
+                var="$var $file"
+            fi
+          done
+          if [ -z "$var" ]
+          then
+                echo "No *.rst changed files to check."
+          else
+                make files="$var" linkcheck-specified-files
+          fi

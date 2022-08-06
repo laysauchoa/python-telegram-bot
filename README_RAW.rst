@@ -79,7 +79,7 @@ This library provides a pure Python, asynchronous interface for the
 `Telegram Bot API <https://core.telegram.org/bots/api>`_.
 It's compatible with Python versions **3.7+**.
 
-``python-telegram-bot-raw`` is part of the `python-telegram-bot <https://python-telegram-bot.org>`_ ecosystem and provides the pure API functionality extracted from PTB. It therefore does not have independent release schedules, changelogs or documentation.
+``python-telegram-bot-raw`` is part of the `python-telegram-bot <https://python-telegram-bot.or>`_ ecosystem and provides the pure API functionality extracted from PTB. It therefore does not have independent release schedules, changelogs or documentation.
 
 Note
 ----
