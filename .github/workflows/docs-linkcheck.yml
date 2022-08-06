@@ -1,8 +1,11 @@
-name: Check Links in Documentation
-on:
-  schedule:
-    # First day of month at 05:46 in every 2nd month
-    - cron: '46 5 1 */2 *'
+name: "LinkCheck - Changed files"
+"on":
+  push:
+    branches:
+      - master
+    tags:
+      - "**"
+  pull_request: null
 
 jobs:
   test-sphinx-build:
