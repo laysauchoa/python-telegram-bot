@@ -192,4 +192,4 @@ pseudoxml:
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
 
 linkcheck-specified-files:
-	sphinx-build -b linkcheck --color "$(SOURCEDIR)" "$(BUILDDIR)" $(files)
+	$(SPHINXBUILD) -b linkcheck --color $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck $(files)
